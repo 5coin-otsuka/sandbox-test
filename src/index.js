@@ -163,14 +163,77 @@
  *map　や filterを使った配列の処理
  */
 // 従来はfor文を利用していた
-const nameArr = ["田中", "山田", "じゃけぇ"];
-for (let index = 0; index < nameArr.length; index++) {
-  console.log(nameArr[index]);
-}
+// const nameArr = ["田中", "山田", "じゃけぇ"];
+// // for (let index = 0; index < nameArr.length; index++) {
+// //   console.log(`${index + 1}番目は${nameArr[index]}`);
+// // }
+// // // mapを使うと簡潔に処理できる
+// // const nmaeArr2 = nameArr.map((name) => {
+// //   return name;
+// // });
+// // console.log(nmaeArr2);
 
-const nmaeArr2 = nameArr.map((name) => {
-  return name;
-});
-console.log(nmaeArr2);
+// // // 処理が１つだけの場合は{}とreturnを省略できる
+// // nameArr.map((name, index) => console.log(`${index + 1}番目は${name}`));
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "じゃけぇ") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
+// console.log(newNameArr);
+/**
+ *
+ */
+// filterはreturn文に一致する特定の値だけを取得する処理
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => {
+//   // 配列numArrから2で割れる数字だけ取り出す
+//   return num % 2 === 0;
+// });
+// console.log(newNumArr);
 
-nameArr.map((name) => console.log(name));
+/**
+ * 三項演算子
+ */
+// ある条件 ? 条件がtrueの時 : 条件がfalseの時
+// const val1 = 1 < 0 ? `trueです` : `falseです`;
+// console.log(val1);
+
+// Number オブジェクトの toLocaleString メソッドは、指定したロケールにあわせて対象の数値を文字列に変換した値を返します。
+// const num = 1300;
+// console.log(num.toLocaleString());
+
+// // 数値の場合はtoLocaleStringを行う。数値痛以外の場合は数値を入力してくだしさいを出力する
+// const formattedNum =
+//   typeof num === "number" ? num.toLocaleString() : "数値を入力してくだしさい";
+// console.log(formattedNum);
+
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? "100を超えています！！" : "許容範囲です";
+// };
+// console.log(checkSum(0, 99));
+
+// /**
+//  * 論理演算子の本当の意味を知ろう && ||
+//  */
+// const flag1 = true;
+// const flag2 = false;
+
+// if (flag1 || flag2) {
+//   console.log("1も2もtrueになります");
+// }
+// if (flag1 && flag2) {
+//   console.log("1も2もtrueになります");
+// }
+
+// // || は非がり側がfalseなら右側を返す
+// const num = 100;
+// const fee = num || "金額未設定です";
+// console.log(fee);
+
+// // && は左側がtrueなら右側を返す
+// const num2 = 100;
+// const fee2 = num2 && "何か設定されました";
+// console.log(fee2);
